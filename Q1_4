@@ -1,0 +1,30 @@
+using namespace std;
+int term[1000];
+int Fib(int n)
+{
+    if (n <= 1)
+        return n;
+    if (term[n] != 0)
+        return term[n];
+ 
+    else {
+        term[n] = Fib(n - 1) + Fib(n - 2);
+        return term[n];
+    }}
+    
+int Fibonacci(int n,int arr[]){
+    int i=2;
+    while(i<n){
+        arr[i]=Fib(i);
+        i++;
+    }
+}
+ 
+int main(){    
+    int n=100;    
+    int arr[100];
+    arr[0]=0; arr[1]=1;
+    Fibonacci(n-2,arr); 
+      return 0;  
+ }
+ 
