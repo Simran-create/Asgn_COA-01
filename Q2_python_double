@@ -1,0 +1,23 @@
+import numpy as np
+def matrix_multiplication(n, mat1, mat2):
+    
+    R = [[0 for x in range (n)] for y in range(n)]
+    
+    for i in range(0, n):
+        for j in range(0,n):
+            for k in range(0,n):
+                R[i][j] += mat1[i][k] * mat2[k][j]
+    
+    for i in range(0,n):
+        print(*R[i])
+        
+n=int(input())
+mat1 = []
+entries_1 = list(map(float, input().split()))
+mat1 = np.array(entries_1).reshape(n,n)
+ 
+mat2 = []
+entries_2 = list(map(float, input().split()))
+mat2 = np.array(entries_2).reshape(n,n)
+print("Answer:")
+matrix_multiplication(n, mat1,mat2)
