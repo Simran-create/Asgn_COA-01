@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+ 
+int main ()
+{
+    int current, old=0,prior=1,n = 100;
+    int arr[100];
+    arr[0]=old;
+    arr[1]=prior;
+    for (int i = 2; i < 100; i++) {
+        current=old+prior;
+        arr[i]=current;
+        old=prior;
+        prior=current;
+    }
+    getchar();
+    return 0;
+}
